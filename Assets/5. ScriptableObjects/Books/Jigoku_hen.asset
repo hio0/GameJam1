@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84833670e95f7548a5b6b1395b47c46, type: 3}
+  m_Name: Jigoku_hen
+  m_EditorClassIdentifier: 
+  storyname: "\uC9C0\uC625\uBCC0"
+  storyear: 1918
+  topics:
+  - "\uD0D0\uBBF8\uC8FC\uC758"
+  junguri: "\uB2E4\uB978 \uBAA8\uB4E0 \uAC83\uBCF4\uB2E4\n\uC608\uC220\uC758 \uAC00\uCE58\uB9CC\uC744
+    \uC18C\uC911\uD788 \uC5EC\uAE34\n\uC5B4\uB290 \uC608\uC220\uAC00\uC758 \uD30C\uBA78."
+  storywriter: "\uC544\uCFE0\uD0C0\uC640 \uB958\uB178\uC2A4\uCF00"
+  mystory: {fileID: 11400000, guid: fb393d030587baf48a27a6675fc550c7, type: 2}
