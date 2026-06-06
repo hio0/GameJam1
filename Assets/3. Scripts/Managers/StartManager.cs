@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,7 @@ public class StartManager : MonoBehaviour
     void Start()
     {
         fadep.gameObject.SetActive(false);
+        StartCoroutine(UIMovement.UIMove.FadeOut(fadep, 1.5f, null));
     }
 
     // Update is called once per frame

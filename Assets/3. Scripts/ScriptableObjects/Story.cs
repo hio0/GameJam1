@@ -12,9 +12,9 @@ public class Story : ScriptableObject
 
     public Sprite[] storyimage;
 
-    public string[] storytext;
-
     public string[] julguritext;
+
+    public List<GameObject> fightscene;
 
     public bool storyend;
 }

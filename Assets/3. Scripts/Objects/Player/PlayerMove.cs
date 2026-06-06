@@ -11,6 +11,9 @@ public class PlayerMove : MonoBehaviour
     public float jumpforce;
     bool isjump;
 
+    public Vector2 nextstorypos;
+    public int walks;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +34,17 @@ public class PlayerMove : MonoBehaviour
             Jumping();
         }
 
+        if(walks == 0)
+        {
+            nextstorypos = gameObject.transform.position;
+        }
+
         Clamped();
     }
 
     void Moving()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        float x = Input.GetAxis("Horizontal");
 
         if (x != 0)
         {
@@ -56,14 +64,15 @@ public class PlayerMove : MonoBehaviour
             }
             else
             {
-                move = 1.5f;
+                return;
             }
             if (isjump)
             {
-                move = move / 3;
+                move = move / 1.5f;
             }
 
             rb.velocity = new Vector2(x * move, rb.velocity.y);
+            walks++;
         }
 
         Clamped();
@@ -79,7 +88,7 @@ public class PlayerMove : MonoBehaviour
 
     void Clamped()
     {
-        float posx = Mathf.Clamp(gameObject.transform.position.x, -8.66f, 100f);
+        float posx = Mathf.Clamp(gameObject.transform.position.x, -8.66f, 10000f);
         rb.position = new Vector2(posx, transform.position.y);
     }
 
